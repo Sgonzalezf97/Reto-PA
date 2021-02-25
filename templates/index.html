@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>Images</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/estilo.css') }}">
+  </head>
+   <body>
+    <nav>
+      <a href = "{{ url_for('upload_file') }}">Subir la foto</a>
+      <a href = "{{ url_for('enviar')}}">Subir a Drive</a>
+      </nav>
+      
+      {% for data in rows %}
+           
+      <img src="{{ url_for('static', filename=data) }}" width="200px"><br>
+      
+    
+      {% endfor %}
+   </body>
+</html>
